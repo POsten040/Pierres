@@ -35,7 +35,7 @@ namespace Pierres.Tests
     {
       Order orderOne = new Order("name", "description", 1, "date");
       Order orderTwo = new Order("name2", "description2",1 , "date2");
-      int Id = 1;
+      int Id = 2;
       Order result = Order.Find(Id);
       Assert.AreEqual(orderTwo, result);
     }
