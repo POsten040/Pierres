@@ -5,16 +5,16 @@ using System;
 
 namespace ToDoList.Tests
 {
-  [TestClass]
-  public class ItemTest : IDisposable
-  {
+  // [TestClass]
+  // public class ItemTest : IDisposable
+  // {
 
-    public void Dispose()
-    {
-      Item.ClearAll();
-    }
+  //   public void Dispose()
+  //   {
+  //     Item.ClearAll();
+  //   }
 
-    [TestMethod]
+  //   [TestMethod]
     
-  }
+  // }
 }

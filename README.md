@@ -41,6 +41,18 @@ This application will allow a business owner to track vendors orders that buy fr
     <th>Input</th>
     <th>Expect</th>
   <tr>
+    <td>Create instance of Vendor with name, description, and static list of orders</td>
+    <td>New Vendor</td>
+    <td>New vendor object with public properties</td>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  <tr>
     <td></td>
     <td></td>
     <td></td>

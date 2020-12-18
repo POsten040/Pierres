@@ -8,7 +8,18 @@ namespace Pierres.Models
     public string Name { get; set; }
     public string Description { get; set; }
     public int Id { get; }
-    public List<Item> Orders { get; set; }
+    public List<Order> Orders { get; set; }
 
+    public Vendor(string name, string description)
+    {
+      Name = name;
+      Description = description;
+      Id = _instances.Count;
+      Orders = new List<Order>{};
+    }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }
