@@ -20,8 +20,8 @@ namespace ToDoList.Tests
       string name = "vendorName";
       string description = "vendorDescription";
       Vendor newVendor = new Vendor(name, description);
-      Assert.AreEqual(newVendor.Name, "wrong name");
-      Assert.AreEqual(newVendor.Description, " wrong Description");
+      Assert.AreEqual(newVendor.Name, "vendorName");
+      Assert.AreEqual(newVendor.Description, "vendorDescription");
     }
   }
 }
