@@ -26,15 +26,20 @@ div.link:hover {
   transform: scale(1.2);
 }
 
-div#title {
+#title {
   font-size: x-large;
   color: rgb(10, 10, 27);
+  font-family: 'IBM Plex Serif', serif;
 }
 
 card#vendorList {
   text-align: center;
   font-style: oblique;
   margin: 10%;
+}
+
+.container {
+  margin: 40px;
 }
 
 .card-text {
