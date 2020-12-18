@@ -24,3 +24,8 @@ div#title {
   font-size: x-large;
   color: rgb(10, 10, 27);
 }
+
+table#table {
+  border: 2px;
+  border-color: darkblue;
+}

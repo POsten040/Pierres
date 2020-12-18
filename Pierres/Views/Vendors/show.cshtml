@@ -4,13 +4,29 @@
 }
 
 <div class="container">
-  <table>
-  <tr>
-    <th>Vendor Name</td>
-    <th>Vendor Description</td>
-  <tr>
-    <td>@Model["vendor"].Name</th>
-    <td>@Model["vendor"].Description</th>
-  </tr>
-  </table>
+  <div class="row">
+    <div class="col-md-6">
+    <table id="table">
+      <tr>
+        <th>Vendor Name</td>
+        <th>Vendor Description</td>
+      <tr>
+        <td>@Model["vendor"].Name</th>
+        <td>@Model["vendor"].Description</th>
+      </tr>
+    </table>
+    <table>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Date</th>
+      @foreach(Order order in @Model["orders"])
+      {
+        <td>@order.Title</td>
+      }
+    </div>
+    <div class="col-md-6">
+      <a href='/vendors/@Model["vendor"].Id/orders/new'>Add an order for this Vendor</a>
+    </div>
+  </div>
 </div>
