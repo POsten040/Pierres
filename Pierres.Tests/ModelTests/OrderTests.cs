@@ -3,18 +3,25 @@ using Pierres.Models;
 using System.Collections.Generic;
 using System;
 
-namespace ToDoList.Tests
+namespace Pierres.Tests
 {
-  // [TestClass]
-  // public class ItemTest : IDisposable
-  // {
+  [TestClass]
+  public class OrderTest : IDisposable
+  {
 
-  //   public void Dispose()
-  //   {
-  //     Item.ClearAll();
-  //   }
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
-  //   [TestMethod]
-    
-  // }
+    [TestMethod]
+    public void Order_CreatesInstaceOfOrderWithProperties_void()
+    {
+      Order newOrder = new Order("title", "description", 1, "date");
+      Assert.AreEqual("title", newOrder.Title);
+      Assert.AreEqual("description", newOrder.Description);
+      Assert.AreEqual(1, newOrder.Price);
+        Assert.AreEqual("price", newOrder.Date);
+    }
+  }
 }
