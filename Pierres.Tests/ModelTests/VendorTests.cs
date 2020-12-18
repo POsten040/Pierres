@@ -27,6 +27,13 @@ namespace ToDoList.Tests
       Vendor newVendor = new Vendor("name", "description");
       List<Order> orderList = new List<Order>{};
       CollectionAssert.AreEqual(orderList, newVendor.Orders);
-    } 
+    }
+    [TestMethod]
+    public void Vendor_AddsIdToNewVendorObjects_void()
+    {
+      Vendor newVendor = new Vendor("name", "description");
+      int Id = 1;
+      Assert.AreEqual(newVendor.Id, Id);
+    }
   }
 }
