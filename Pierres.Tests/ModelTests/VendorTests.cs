@@ -25,8 +25,8 @@ namespace ToDoList.Tests
     public void Vendor_CreatesEmptyListForOrders_void()
     {
       Vendor newVendor = new Vendor("name", "description");
-      List<Vendor> vendorList = new List<Vendor>{};
-      Assert.AreEqual("vendor", newVendor.Orders);
+      List<Order> orderList = new List<Order>{};
+      CollectionAssert.AreEqual(orderList, newVendor.Orders);
     } 
   }
 }
