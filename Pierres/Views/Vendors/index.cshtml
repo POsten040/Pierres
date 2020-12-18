@@ -1,0 +1,21 @@
+@using Pierres.Models;
+
+@{
+  Layout = "_Layout";
+}
+
+<h1>List of Vendors</h1>
+
+@if (@Model.Count == 0)
+{
+  <h2>There are currently no vendors</h2>
+}
+<ul>
+  @foreach(Vendor vendor in Model)
+  {
+    <li><a href="/vendors/@vendor.Id" class="btn btn-info">@vendor.Name</a></li>
+  }
+</ul>
+<a href='/vendors/new'class="btn btn-primary">Add a new vendor</a>
+
+@Html.Partial("_Sidebar")
