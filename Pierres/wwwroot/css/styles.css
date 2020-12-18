@@ -8,5 +8,19 @@ div#sidebar {
   bottom: 50%;
   left: 0px;
   top: 0px;
-  background-color: greenyellow;
+  background-color:rgb(134, 165, 87);
+  padding: 15px;
+}
+
+div.link {
+  transform: scale(1);
+}
+
+div.link:hover {
+  transform: scale(1.2);
+}
+
+div#title {
+  font-size: x-large;
+  color: rgb(10, 10, 27);
 }
