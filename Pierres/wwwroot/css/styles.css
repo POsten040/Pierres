@@ -1,15 +1,21 @@
 body {
+  background-color: lightblue;
   margin: auto;
   max-width: 1200px;
 }
 
 div#sidebar {
+  color: black;
   position: fixed;
   bottom: 50%;
   left: 0px;
   top: 0px;
-  background-color:rgb(134, 165, 87);
-  padding: 15px;
+  background-color:rgb(116, 98, 56);
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
 }
 
 div.link {
@@ -25,7 +31,12 @@ div#title {
   color: rgb(10, 10, 27);
 }
 
-table#table {
-  border: 2px;
-  border-color: darkblue;
+card#vendorList {
+  text-align: center;
+  font-style: oblique;
+  margin: 10%;
+}
+
+.card-text {
+  padding: 5px;
 }

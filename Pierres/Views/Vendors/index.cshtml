@@ -14,7 +14,12 @@
   <ul>
     @foreach(Vendor vendor in @Model)
     {
-      <li><a href='/vendors/@vendor.Id'>@vendor.Name</a></li>
+      <li>
+        <div id ="vendorList" class="card">
+          <a class="card-header" href='/vendors/@vendor.Id'><h3>@vendor.Name</h3></a>
+          <p class="card-body">@vendor.Description</p>
+        </div>
+      </li>
     }
   </ul>
   <a href='/vendors/new'class="btn btn-primary">Add a new vendor</a>
