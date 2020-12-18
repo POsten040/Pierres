@@ -21,7 +21,7 @@ namespace Pierres.Tests
       Assert.AreEqual("title", newOrder.Title);
       Assert.AreEqual("description", newOrder.Description);
       Assert.AreEqual(1, newOrder.Price);
-        Assert.AreEqual("price", newOrder.Date);
+        Assert.AreEqual("date", newOrder.Date);
     }
   }
 }
