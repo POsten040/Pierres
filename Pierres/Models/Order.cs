@@ -25,5 +25,9 @@ namespace Pierres.Models
     {
       return _instances;
     }
+    public static Order Find(int Id)
+    {
+      return _instances[Id-1];
+    } 
   }
 }

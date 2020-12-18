@@ -30,5 +30,14 @@ namespace Pierres.Tests
       List<Order> orderList = new List<Order>{newOrder};
       CollectionAssert.AreEqual(orderList, Order.GetAll());
     }
+    [TestMethod]
+    public void Find_SearchesForSpecificOrder_void()
+    {
+      Order orderOne = new Order("name", "description", 1, "date");
+      Order orderTwo = new Order("name2", "description2",1 , "date2");
+      int Id = 1;
+      Order result = Order.Find(Id);
+      Assert.AreEqual(orderTwo, result);
+    }
   }
 }
