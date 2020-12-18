@@ -11,11 +11,9 @@
   <h2>There are currently no vendors</h2>
 }
 <ul>
-  @foreach(Vendor vendor in Model)
+  @foreach(Vendor vendor in @Model)
   {
-    <li><a href="/vendors/@vendor.Id" class="btn btn-info">@vendor.Name</a></li>
+    <li><a href='/vendors/@vendor.Id'>@vendor.Name</a></li>
   }
 </ul>
 <a href='/vendors/new'class="btn btn-primary">Add a new vendor</a>
-
-@Html.Partial("_Sidebar")
