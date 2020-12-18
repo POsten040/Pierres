@@ -17,11 +17,16 @@ namespace ToDoList.Tests
     [TestMethod]
     public void Vendor_CreateInstanceOfVendorWithProperties_True()
     {
-      string name = "vendorName";
-      string description = "vendorDescription";
-      Vendor newVendor = new Vendor(name, description);
-      Assert.AreEqual(newVendor.Name, "vendorName");
-      Assert.AreEqual(newVendor.Description, "vendorDescription");
+      Vendor newVendor = new Vendor("name", "description");
+      Assert.AreEqual(newVendor.Name, "name");
+      Assert.AreEqual(newVendor.Description, "description");
     }
+    [TestMethod]
+    public void Vendor_CreatesEmptyListForOrders_void()
+    {
+      Vendor newVendor = new Vendor("name", "description");
+      List<Vendor> vendorList = new List<Vendor>{};
+      Assert.AreEqual("vendor", newVendor.Orders);
+    } 
   }
 }
