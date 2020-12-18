@@ -35,5 +35,14 @@ namespace ToDoList.Tests
       int Id = 1;
       Assert.AreEqual(newVendor.Id, Id);
     }
+    [TestMethod]
+    public void Find_SearchesForSpecificVendor_void()
+    {
+      Vendor vendorOne = new Vendor("name", "description");
+      Vendor vendorTwo = new Vendor("name2", "description2");
+      int Id = 2;
+      Vendor result = Vendor.Find(Id);
+      Assert.AreEqual(vendorTwo, result);
+    }
   }
 }
