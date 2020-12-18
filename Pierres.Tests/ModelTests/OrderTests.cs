@@ -21,7 +21,14 @@ namespace Pierres.Tests
       Assert.AreEqual("title", newOrder.Title);
       Assert.AreEqual("description", newOrder.Description);
       Assert.AreEqual(1, newOrder.Price);
-        Assert.AreEqual("date", newOrder.Date);
+      Assert.AreEqual("date", newOrder.Date);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsListOfAllOrders_void()
+    {
+      Order newOrder = new Order("name", "description", 1, "date");
+      List<Order> orderList = new List<Order>{newOrder};
+      CollectionAssert.AreEqual(orderList, Order.GetAll());
     }
   }
 }
