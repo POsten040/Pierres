@@ -1,0 +1,36 @@
+@using Pierres.Models;
+@using System;
+
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <h1>Add order for @Model["vendor"].Name</h1>
+  <form action='/vendors/@Model["vendor"].Id/orders/new' method="post">
+    <label for="orderTitle">Order Title</label>
+    <input id="orderTitle" name="orderTitle" type="text">
+    <label for="orderDescription">Description</label>
+    <input id="orderDescription" name="orderDescription" type="text">
+    <label for="orderPrice">Price</label>
+    <input id="orderPrice" name="orderPrice" type="number">
+    <label for="orderDate">Date</label>
+    <input id="orderDate" name="orderDate" type="text">
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+  <div>
+    <ul>
+      @foreach(Order order in @Model["orders"])
+      {
+        <details>
+          <summary>@order.Title</summary>
+          <li>@order.Description</li>
+          <li>@order.Price</li>
+          <li>@order.Date</li>
+        </details>
+      }
+    </ul>
+
+  </div>
+</div>
