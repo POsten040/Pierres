@@ -28,6 +28,10 @@ namespace Pierres.Models
     public static Order Find(int Id)
     {
       return _instances[Id-1];
-    } 
+    }
+    public void Remove()
+    {
+      _instances.Remove(this);
+    }
   }
 }

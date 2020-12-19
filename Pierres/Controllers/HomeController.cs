@@ -17,6 +17,5 @@ namespace Pierre.Controllers
       Vendor newVendor = new Vendor(vendorName, vendorDescription);
       return RedirectToAction("Index");
     }
-
   }
 }

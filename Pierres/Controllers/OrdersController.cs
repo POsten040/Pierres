@@ -16,5 +16,11 @@ namespace Pierres.Controllers
 			model.Add("orders", orderList);
 			return View(model);
     }
+    [HttpGet("orders/all")]
+    public ActionResult All()
+    {
+      List<Vendor> allVendors = Vendor.GetAll();
+      return View(allVendors);
+    }
   }
 }

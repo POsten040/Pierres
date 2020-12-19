@@ -1,5 +1,30 @@
+@using Pierres.Models;
+
 @{
   Layout = "_Layout";
 }
 
-<h1>Index</h1>
+<div class="container">
+  <h1>Orders Grouped by Vendor</h1>
+  <ul>
+    @foreach(Vendor vendor in @Model)
+    {
+      <li>
+        <div id="allOrders" class="card">
+          <a class="card-header" href='/vendors/@vendor.Id'><h3>@vendor.Name</h3></a>
+          <details class="card-body">
+            <summary>Orders</summary>
+            <br>
+            <ul>
+              @foreach(Order order in vendor.Orders)
+              {
+                <li>@order.Title</li>
+              }
+            </ul>
+          </details>
+        </div>
+      </li>
+    <a href='/vendors/@vendor.Id/orders/new' class="btn btn-info">Add an order for this Vendor</a>
+    }
+  </ul>
+</div>
