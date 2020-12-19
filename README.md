@@ -4,9 +4,9 @@
 
 ## Description
 
-![](./assets/recording.gif)
+![](Pierres/wwwroot/img/recording.gif)
 
-This application will allow a business owner to track vendors orders that buy from the business. It includes a splash page, a page for vendors, and order details for each vendor.  
+This application will allow a business owner to track vendors orders that buy from the business. It includes a splash page, a page for adding/viewing all vendors, order details, and viewing all current orders.  
 
 ## Installation Requirements
 
